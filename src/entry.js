@@ -4,13 +4,14 @@ import style from './style.scss';
 
 let PureRenderMixin = addons.PureRenderMixin;
 
-class HelloMessage extends React.Component {
+let HelloMessage = React.createClass({
 
-  mixin = [PureRenderMixin];
+  mixin: [PureRenderMixin],
 
   render() {
+    console.log(this.shouldComponentUpdate);
     return <div className={style['hello-world']}>Hello {this.props.name}</div>;
-  }
-}
+  },
+});
 
 React.render(<HelloMessage name='John' />, document.getElementById('main'));
