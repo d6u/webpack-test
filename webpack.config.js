@@ -20,7 +20,7 @@ module.exports = {
             'css-loader?localIdentName=[local]__[hash:base64:5]',
             'postcss-loader',
             'sass-loader?outputStyle=expanded'
-          ].join('!'),
+          ].join('!')
         ),
       },
       {
@@ -40,6 +40,6 @@ module.exports = {
   ],
 
   plugins: [
-    new ExtractTextPlugin('style.css', {allChunks: true}),
+    new ExtractTextPlugin('style.css', { allChunks: true }),
   ],
 };

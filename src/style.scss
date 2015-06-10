@@ -6,7 +6,11 @@ body {
   font-size: 30px;
   user-select: none;
 
-  .user {
+  :global(.user) {
     background-color: #000;
   }
+}
+
+:global .global-class {
+  color: grey;
 }
